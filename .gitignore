@@ -1,0 +1,9 @@
+/.idea
+
+/vendor/phpunit
+/vendor/phpspec
+/vendor/phpdocumentor
+
+/cache
+/logs
+composer.lock

@@ -1,0 +1,32 @@
+{
+  "name": "MediaStoreNet/WpWorkflowPlugin",
+  "description": "A Wordpress Plugin Template that comes with composer and a lightweight MVC framework for Wordpress.",
+  "license": "MIT",
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "plugins",
+    "mvc"
+  ],
+  "authors": [
+    {
+      "name": "Artur Voll",
+      "email": "kontakt@media-store.net"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "amostajo/wordpress-plugin-core": "1.0.*",
+    "media-store-net/wp-rest-registration": "dev-master",
+    "yahnis-elsts/plugin-update-checker": ">=4.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "WPW\\": ""
+    }
+  },
+  "minimum-stability": "dev",
+  "require-dev": {
+    "phpunit/phpunit": "7"
+  }
+}
