@@ -1,8 +1,4 @@
-# WORDPRESS PLUGIN TEMPLATE
-
-[![Latest Stable Version](https://poser.pugx.org/amostajo/wordpress-plugin/v/stable)](https://packagist.org/packages/amostajo/wordpress-plugin)
-[![Total Downloads](https://poser.pugx.org/amostajo/wordpress-plugin/downloads)](https://packagist.org/packages/amostajo/wordpress-plugin)
-[![License](https://poser.pugx.org/amostajo/wordpress-plugin/license)](https://packagist.org/packages/amostajo/wordpress-plugin)
+# WORDPRESS PLUGIN TEMPLATE - Originale Readme
 
 The power of **Composer** and **MVC** in your **Wordpress** plugins.
 
