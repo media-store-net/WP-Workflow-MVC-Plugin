@@ -1,8 +1,6 @@
 /.idea
 
-/vendor/phpunit
-/vendor/phpspec
-/vendor/phpdocumentor
+/vendor
 
 /cache
 /logs
