@@ -1,0 +1,22 @@
+{
+  "name": "media-store-net/wp-rest-registration",
+  "description": "A Simple Way to Register Rest Routes to WP",
+  "homepage": "https://github.com/media-store-net/WpRestRegistration",
+  "version": "1.0.7",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Artur Voll",
+      "email": "info@pcservice-voll.de"
+    }
+  ],
+  "require": {
+    "php": "^5.6.37 || ^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MediaStoreNet\\WpRestRegistration\\": "src/"
+    }
+  },
+  "license": "MIT"
+}

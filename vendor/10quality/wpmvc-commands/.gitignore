@@ -1,0 +1,8 @@
+/vendor
+/tests/environment/vendor
+/tests/environment/app/Widgets
+/tests/environment/app/Controllers
+/tests/environment/app/Models
+/tests/environment/assets/views/*.php
+composer.lock
+debug.log
