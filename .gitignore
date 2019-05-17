@@ -1,7 +1,29 @@
 /.idea
-
-/vendor
+composer.lock
 
 /cache
 /logs
-composer.lock
+
+#Vendor
+/vendor/bin
+/vendor/phpunit
+/vendor/phpspec
+/vendor/phpdocumentor
+
+/vendor/**/.git
+/vendor/**/**/.git
+
+/vendor/**/**/[Tt]ests
+/vendor/**/**/[Tt]est
+
+/vendor/**/**/[Dd]ocumentation
+/vendor/**/**/[Dd]ocs
+/vendor/**/**/[Dd]oc
+
+/vendor/sebastian
+
+# GOETAS
+/vendor/goetas-webservices/xsd2php
+
+#nikic
+/vendor/nikic/**/test_old

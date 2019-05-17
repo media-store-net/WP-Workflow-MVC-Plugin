@@ -27,6 +27,7 @@
   },
   "minimum-stability": "dev",
   "require-dev": {
-    "phpunit/phpunit": "7"
+    "phpunit/phpunit": "7",
+    "10quality/wpmvc-commands": "^1.0"
   }
 }

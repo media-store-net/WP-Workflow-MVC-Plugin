@@ -29,6 +29,10 @@ $plugin_class = $plugin_namespace . '\plugin\Main';
 
 $plugin_reflection = new ReflectionClass( get_parent_class( $plugin_class ) );
 
+// Global Instance of Core Container
+$wpwContainer = new \WPW\core\Container();
+
+
 /**
  * Core version check.
  * @since 1.0.2
