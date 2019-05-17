@@ -6,7 +6,7 @@
  * Time: 12:52
  */
 
-namespace wpw\core;
+namespace WPW\core;
 
 
 use WPW\controllers\LanguageController;
@@ -19,6 +19,8 @@ use WPW\plugin\Models\PostTypeModel;
 
 class Container {
 
+	private $selfInstance;
+
 	private $config;
 
 	private $aliases = [];
@@ -30,6 +32,12 @@ class Container {
 		global $config;
 		$this->config  = $config;
 		$this->aliases = $this->getObjectAliases();
+
+		if ( ! $this->selfInstance ):
+			return $this->selfInstance;
+		endif;
+		$this->selfInstance = true;
+
 	}
 
 	public function make( $objectName ) {
@@ -69,6 +77,14 @@ class Container {
 			},
 			'PostTypeController' => function () {
 				return new PostTypeController();
+			},
+			'currentUser'        => function () {
+				if ( ! function_exists( 'wp_get_current_user' ) ) {
+					include( ABSPATH . "wp-includes/pluggable.php" );
+				}
+				$current_user = wp_get_current_user();
+
+				return $current_user;
 			},
 			'View'               => function () {
 				return new View( $this->config['paths']['views'] );

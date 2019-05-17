@@ -38,9 +38,10 @@ class AbstractController extends Controller {
 	 */
 	public function __construct() {
 		$config = include( WPW_DIR . 'config/plugin.php' );
+		parent::__construct( $config['paths']['views'] );
+		$wpwContainer = new \wpw\core\Container();
 
-		$this->view = new View( $config['paths']['views'] );
-		$this->user = new \WP_User( get_current_user_id() );
-
+		$this->view = $wpwContainer->make( 'View' );
+		$this->user = $wpwContainer->make( 'currentUser' );
 	}
 }

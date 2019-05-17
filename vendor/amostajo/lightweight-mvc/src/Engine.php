@@ -130,7 +130,8 @@ class Engine
 		}
 
 		// Get controller
-		require_once(  $this->controllers_path . $compo[0] . '.php' );
+		$reqFile = str_replace('\\', '/', $compo[0]);
+		require_once(  $this->controllers_path . $reqFile . '.php' );
 		$classname = sprintf( $this->namespace . '\Controllers\%s', $compo[0]);
 		$controller = new $classname( $this->view );
 

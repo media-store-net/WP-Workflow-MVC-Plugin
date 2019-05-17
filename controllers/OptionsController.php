@@ -10,6 +10,7 @@
 
 namespace WPW\controllers;
 
+use WPW\core\Container;
 use WPW\plugin\Models\OptionsModel;
 
 /**
@@ -18,10 +19,7 @@ use WPW\plugin\Models\OptionsModel;
  */
 class OptionsController extends AbstractController {
 
-	/**
-	 * @var bool
-	 */
-	private $called = false;
+	private $container;
 
 	/**
 	 * @var OptionsModel
@@ -33,18 +31,9 @@ class OptionsController extends AbstractController {
 	 */
 	public function __construct() {
 		parent::__construct();
+		$this->container    = new Container();
+		$this->optionsModel = $this->container->make( 'OptionsModel' );
 
-		if ( $this->called ) {
-			return $this;
-		}
-
-		$this->optionsModel = new OptionsModel( 'wpw_options', 'wpw_group', $this->getOptionsArray() );
-
-		$this->called = true;
-	}
-
-	public function getOptionsArray() {
-		return array();
 	}
 
 	/**

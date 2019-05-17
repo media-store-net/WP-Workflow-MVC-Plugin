@@ -26,6 +26,7 @@ class PostTypeController extends AbstractController {
 	 */
 	public function register_post_type() {
 		global $langName;
+		global $wpwContainer;
 
 		$typeLabels = array(
 			'name'               => __( 'WP Workflows', $langName ), // Name im Plural
@@ -42,7 +43,7 @@ class PostTypeController extends AbstractController {
 			'not_found_in_trash' => __( 'No Workflows in Trash', $langName )
 		);
 
-		$type = new PostTypeModel();
+		$type = $wpwContainer->make('PostTypeModel');
 		$type->set_name( 'wpw_type' );
 		$type->post_type_args(
 			array(
