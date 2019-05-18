@@ -31,6 +31,6 @@ abstract class Controller
 	public function __construct( $view )
 	{
 		$this->user = \get_userdata( get_current_user_id() );
-		$this->view = $view;
+		//$this->view = $view;
 	}
 }
